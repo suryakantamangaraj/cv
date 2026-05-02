@@ -75,7 +75,7 @@ export function LoadingScreen() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                RF & Communication Engineer
+                RF System Engineer
               </motion.p>
             </div>
             <div className="w-48 h-1 rounded-full bg-secondary overflow-hidden">

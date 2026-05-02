@@ -29,7 +29,7 @@ export function Header() {
             />
             <div className="leading-tight">
               <span className="text-sm font-semibold text-foreground font-heading">Surya Mangaraj</span>
-              <span className="hidden sm:block text-xs text-muted-foreground">RF & Communication Engineer</span>
+              <span className="hidden sm:block text-xs text-muted-foreground">RF System Engineer</span>
             </div>
           </Link>
 
