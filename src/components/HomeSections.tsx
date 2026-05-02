@@ -322,14 +322,41 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  { id: "t1", name: "Aarav Sharma", role: "Sr. RF Engineer, Telecom Co.", avatar: "https://i.pravatar.cc/120?img=12", quote: "Surya's grasp of RF systems is unmatched. He spotted issues in our calibration pipeline that saved us months of debugging." },
-  { id: "t2", name: "Priya Reddy", role: "Engineering Manager, Cadence", avatar: "https://i.pravatar.cc/120?img=47", quote: "A rare combination — deep technical chops and a builder's heart. Surya makes the team better just by being in the room." },
-  { id: "t3", name: "Liang Wei", role: "Open-Source Maintainer", avatar: "https://i.pravatar.cc/120?img=33", quote: "His awesome-riscv repo is the first link I send to anyone serious about the ecosystem. Quality reflects the person." },
-  { id: "t4", name: "Maya Nair", role: "Founder, IoT Startup", avatar: "https://i.pravatar.cc/120?img=49", quote: "We hired Surya as a consultant. Three weeks in, he'd shipped what we'd been planning for a quarter. Wild execution speed." },
-  { id: "t5", name: "Rahul Verma", role: "Tech Lead, Avionics R&D", avatar: "https://i.pravatar.cc/120?img=15", quote: "Reliability-grade thinking with consumer-grade speed. That's the cheat code Surya brought to our project." },
-  { id: "t6", name: "Sneha Iyer", role: "PhD Researcher, IIT", avatar: "https://i.pravatar.cc/120?img=44", quote: "Co-authored a paper with him. Crisp, rigorous, and never afraid to challenge an assumption. Best collaborator I've had." },
-  { id: "t7", name: "Daniel Park", role: "Hackathon Mentor", avatar: "https://i.pravatar.cc/120?img=58", quote: "Surya's mentorship turned our prototype into a finalist project. Patient, sharp, generous with time." },
-  { id: "t8", name: "Anika Bose", role: "Community Lead", avatar: "https://i.pravatar.cc/120?img=23", quote: "Every talk Surya gives leaves the audience with a clearer mental model. That's a superpower." },
+  {
+    id: "t1",
+    name: "Sushree Bandita",
+    role: "Lead, Samsung Semiconductor",
+    avatar: "/avatars/SushreeBandita.webp",
+    quote: "Good hardworking candidate.",
+  },
+  {
+    id: "t2",
+    name: "Govind Sagar",
+    role: "Senior Lead Engineer, Qualcomm",
+    avatar: "/avatars/GovindSagar.webp",
+    quote: "Being a senior and a mentor I personally know Surya. He is a technically sound guy and a fast learner. He can be an asset if utilised properly.",
+  },
+  {
+    id: "t3",
+    name: "Bipul Kumar Pal",
+    role: "Physical Verification Lead, Cadence",
+    avatar: "/avatars/BipulKumarPal.webp",
+    quote: "He has good knowledge of analog circuit in VLSI. He has good analytical and communication skills. He is optimistic in nature.",
+  },
+  {
+    id: "t4",
+    name: "Ashar Jami",
+    role: "Manager, Bajaj Finserv",
+    avatar: "/avatars/AsharJami.webp",
+    quote: "Surya is a hard working person with vast knowledge in AI and IoT. An entrepreneur mind—founding Executive board member of Protionix Technology. He would be a great asset to any organisation.",
+  },
+  {
+    id: "t5",
+    name: "Satya Prakash Bharti",
+    role: "Co-founder, thetech52",
+    avatar: "/avatars/SatyaPrakashBharti.webp",
+    quote: "He was the best team leader who would not only push us to do the work but made an example of himself by working long hours. Truly a valuable asset.",
+  },
 ];
 
 export function TestimonialsSection() {
