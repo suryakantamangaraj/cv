@@ -8,11 +8,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -28,7 +28,6 @@ jobs:
 
       - name: Prepare Assets for Serve Branch
         run: |
-          cp CNAME dist/client/ 2>/dev/null || echo "No CNAME found"
           cp README.md dist/client/ 2>/dev/null || echo "No README found"
           cp LICENSE dist/client/ 2>/dev/null || echo "No LICENSE found"
           touch dist/client/.nojekyll
@@ -39,4 +38,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/client
           publish_branch: main
-          force_push: true
+          cname: cv.suryaraj.com
+          # force_orphan: true # Uncomment if you want to clear history on main every time
