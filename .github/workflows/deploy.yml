@@ -28,15 +28,15 @@ jobs:
 
       - name: Prepare Assets for Serve Branch
         run: |
-          cp README.md dist/client/ 2>/dev/null || echo "No README found"
-          cp LICENSE dist/client/ 2>/dev/null || echo "No LICENSE found"
-          touch dist/client/.nojekyll
+          cp README.md dist/ 2>/dev/null || echo "No README found"
+          cp LICENSE dist/ 2>/dev/null || echo "No LICENSE found"
+          touch dist/.nojekyll
 
       - name: Deploy to Main (Serve Branch)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/client
+          publish_dir: ./dist
           publish_branch: main
           cname: cv.suryaraj.com
           # force_orphan: true # Uncomment if you want to clear history on main every time
