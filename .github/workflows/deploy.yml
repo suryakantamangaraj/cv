@@ -3,7 +3,6 @@ name: Build and Serve
 on:
   push:
     branches:
-      - prod
       - dev
 
 jobs:
@@ -27,11 +26,17 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Prepare Assets for Serve Branch
+        run: |
+          cp CNAME dist/client/ 2>/dev/null || echo "No CNAME found"
+          cp README.md dist/client/ 2>/dev/null || echo "No README found"
+          cp LICENSE dist/client/ 2>/dev/null || echo "No LICENSE found"
+          touch dist/client/.nojekyll
+
       - name: Deploy to Main (Serve Branch)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/client
           publish_branch: main
-          cname: cv.suryaraj.com
           force_push: true
