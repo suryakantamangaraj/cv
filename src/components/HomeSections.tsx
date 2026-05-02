@@ -17,24 +17,24 @@ const oneLiners = [
 ];
 
 const achievements = [
-  { icon: Briefcase, value: "7+", label: "Years of Experience", description: "Across Telecom, Aerospace & Satellite", color: "text-primary", gradient: "from-primary/20 to-primary/5" },
-  { icon: Award, value: "5+", label: "Awards & Honors", description: "PSPICE, TI, Cadence & more", color: "text-highlight", gradient: "from-highlight/20 to-highlight/5" },
-  { icon: FileText, value: "1+", label: "Research Papers", description: "Op-Amp design for LDO applications", color: "text-chart-2", gradient: "from-chart-2/20 to-chart-2/5" },
-  { icon: FolderGit2, value: "19+", label: "Projects & Open Source", description: "395+ GitHub stars across repos", color: "text-chart-5", gradient: "from-chart-5/20 to-chart-5/5" },
+  { icon: Briefcase, value: "8+", label: "Years of Experience", description: "RF Design across Telecom, Aerospace & Satellite", color: "text-primary", gradient: "from-primary/20 to-primary/5" },
+  { icon: Award, value: "10+", label: "Awards & Honors", description: "Honeywell, Cadence & more", color: "text-highlight", gradient: "from-highlight/20 to-highlight/5" },
+  { icon: FileText, value: "5+", label: "Publications & IPs", description: "Technical publications & proprietary assets", color: "text-chart-2", gradient: "from-chart-2/20 to-chart-2/5" },
+  { icon: FolderGit2, value: "20+", label: "Projects & Open Source", description: "Industry projects and open‑source engagement", color: "text-chart-5", gradient: "from-chart-5/20 to-chart-5/5" },
 ];
 
 const whatIDo = [
-  { icon: Radio, title: "RF & Comm Systems", description: "Telecom, Avionics, Satellite, RISC-V" },
-  { icon: Code, title: "AI, ML & Web Dev", description: "Full-stack, ML pipelines, Automation" },
+  { icon: Radio, title: "RF & Comm Systems", description: "EDA, Telecom, Avionics, Satellite, Automation" },
+  { icon: Code, title: "AI, ML & Web Dev", description: "AI solutions, Full-stack, ML pipelines" },
   { icon: PenTool, title: "Authorship & Media", description: "Technical writing, Blogs, Publications" },
 ];
 
 const processSteps = [
-  { num: "01", title: "Discovery",     description: "Understanding your vision, goals, and requirements through in-depth consultation.", duration: "1-2 days",  items: ["Requirements gathering", "Market research", "Technical feasibility"], icon: Search },
-  { num: "02", title: "Planning",      description: "Creating a detailed roadmap with milestones, tech stack decisions, and architecture.", duration: "2-3 days",  items: ["Scope & timeline", "Tech stack selection", "Architecture design"], icon: Lightbulb },
-  { num: "03", title: "Development",   description: "Building with clean, maintainable code using modern frameworks and best practices.",   duration: "2-6 weeks", items: ["Agile sprints", "Clean code & testing", "CI/CD pipeline"], icon: Code },
-  { num: "04", title: "Testing & QA",  description: "Rigorous testing to ensure flawless performance across all scenarios.",                 duration: "3-5 days",  items: ["Unit & integration", "Performance audits", "Cross-platform"], icon: TestTube },
-  { num: "05", title: "Launch",        description: "Deploying to production with monitoring and ongoing support.",                          duration: "1-2 days",  items: ["Production deploy", "Monitoring setup", "Post-launch support"], icon: Rocket },
+  { num: "01", title: "Discovery", description: "Understanding vision, goals & requirements through consultation.", duration: "1–2 days", items: ["Stakeholder interviews", "Market & domain research", "Feasibility analysis"], icon: Search },
+  { num: "02", title: "Planning", description: "Defining roadmap, milestones & resource allocation.", duration: "2–3 days", items: ["Scope & timeline", "Technology/tool selection", "System architecture"], icon: Lightbulb },
+  { num: "03", title: "Execution", description: "Iterative development and prototyping using Agile practices.", duration: "2–6 weeks (depending on scope)", items: ["Agile sprints", "Design & build cycles", "Integration workflows"], icon: Code },
+  { num: "04", title: "Validation", description: "Testing and quality assurance across hardware & software.", duration: "3–5 days (depending on scope)", items: ["Functional testing", "Performance audits", "Cross‑platform/system checks"], icon: TestTube },
+  { num: "05", title: "Launch", description: "Deployment or delivery with monitoring & ongoing support.", duration: "1–2 days", items: ["Production release", "Monitoring setup", "Post‑launch support"], icon: Rocket },
 ];
 
 const fadeUp = {
@@ -91,11 +91,10 @@ export function HeroSection() {
             <motion.button
               variants={fadeUp} custom={0}
               onClick={() => setConnectOpen(true)}
-              className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm transition-all hover:scale-[1.02] ${
-                status.available
-                  ? "border-primary/30 bg-primary/5 text-primary"
-                  : "border-destructive/30 bg-destructive/5 text-destructive"
-              }`}
+              className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm transition-all hover:scale-[1.02] ${status.available
+                ? "border-primary/30 bg-primary/5 text-primary"
+                : "border-destructive/30 bg-destructive/5 text-destructive"
+                }`}
             >
               <span className={`h-2 w-2 rounded-full animate-pulse ${status.available ? "bg-primary" : "bg-destructive"}`} />
               <AnimatePresence mode="wait">
@@ -126,7 +125,10 @@ export function HeroSection() {
             </motion.div>
 
             <motion.p variants={fadeUp} custom={3} className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              RF System Design & Test Automation (Telecom & Aerospace) | AI/ML for Wireless Communication | Open Source Contributor — building scalable solutions across Telecom, Avionics, and Satellite domains.
+              RF System Design, EDA & Test Automation <br />
+              Communication Systems Engineering <br />
+              AI/ML for Wireless Communication <br />
+              Open‑Source Contributor
             </motion.p>
 
             <motion.div variants={fadeUp} custom={4} className="h-7">
@@ -253,9 +255,8 @@ export function ProcessSection() {
                     onMouseEnter={() => setActiveIdx(i)}
                     onMouseLeave={() => setActiveIdx(null)}
                     onClick={() => setActiveIdx(active ? null : i)}
-                    className={`group cursor-pointer relative w-full md:w-[42%] rounded-2xl border bg-card/80 backdrop-blur p-6 transition-all ${
-                      active ? "border-primary/60 shadow-[0_0_40px_-10px_var(--primary)] -translate-y-1" : "border-border hover:border-primary/30"
-                    }`}
+                    className={`group cursor-pointer relative w-full md:w-[42%] rounded-2xl border bg-card/80 backdrop-blur p-6 transition-all ${active ? "border-primary/60 shadow-[0_0_40px_-10px_var(--primary)] -translate-y-1" : "border-border hover:border-primary/30"
+                      }`}
                   >
                     {/* Horizontal branch connecting card edge to center spine */}
                     <div
@@ -321,14 +322,14 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  { id: "t1", name: "Aarav Sharma",  role: "Sr. RF Engineer, Telecom Co.", avatar: "https://i.pravatar.cc/120?img=12", quote: "Surya's grasp of RF systems is unmatched. He spotted issues in our calibration pipeline that saved us months of debugging." },
-  { id: "t2", name: "Priya Reddy",   role: "Engineering Manager, Cadence", avatar: "https://i.pravatar.cc/120?img=47", quote: "A rare combination — deep technical chops and a builder's heart. Surya makes the team better just by being in the room." },
-  { id: "t3", name: "Liang Wei",     role: "Open-Source Maintainer",       avatar: "https://i.pravatar.cc/120?img=33", quote: "His awesome-riscv repo is the first link I send to anyone serious about the ecosystem. Quality reflects the person." },
-  { id: "t4", name: "Maya Nair",     role: "Founder, IoT Startup",         avatar: "https://i.pravatar.cc/120?img=49", quote: "We hired Surya as a consultant. Three weeks in, he'd shipped what we'd been planning for a quarter. Wild execution speed." },
-  { id: "t5", name: "Rahul Verma",   role: "Tech Lead, Avionics R&D",      avatar: "https://i.pravatar.cc/120?img=15", quote: "Reliability-grade thinking with consumer-grade speed. That's the cheat code Surya brought to our project." },
-  { id: "t6", name: "Sneha Iyer",    role: "PhD Researcher, IIT",          avatar: "https://i.pravatar.cc/120?img=44", quote: "Co-authored a paper with him. Crisp, rigorous, and never afraid to challenge an assumption. Best collaborator I've had." },
-  { id: "t7", name: "Daniel Park",   role: "Hackathon Mentor",             avatar: "https://i.pravatar.cc/120?img=58", quote: "Surya's mentorship turned our prototype into a finalist project. Patient, sharp, generous with time." },
-  { id: "t8", name: "Anika Bose",    role: "Community Lead",               avatar: "https://i.pravatar.cc/120?img=23", quote: "Every talk Surya gives leaves the audience with a clearer mental model. That's a superpower." },
+  { id: "t1", name: "Aarav Sharma", role: "Sr. RF Engineer, Telecom Co.", avatar: "https://i.pravatar.cc/120?img=12", quote: "Surya's grasp of RF systems is unmatched. He spotted issues in our calibration pipeline that saved us months of debugging." },
+  { id: "t2", name: "Priya Reddy", role: "Engineering Manager, Cadence", avatar: "https://i.pravatar.cc/120?img=47", quote: "A rare combination — deep technical chops and a builder's heart. Surya makes the team better just by being in the room." },
+  { id: "t3", name: "Liang Wei", role: "Open-Source Maintainer", avatar: "https://i.pravatar.cc/120?img=33", quote: "His awesome-riscv repo is the first link I send to anyone serious about the ecosystem. Quality reflects the person." },
+  { id: "t4", name: "Maya Nair", role: "Founder, IoT Startup", avatar: "https://i.pravatar.cc/120?img=49", quote: "We hired Surya as a consultant. Three weeks in, he'd shipped what we'd been planning for a quarter. Wild execution speed." },
+  { id: "t5", name: "Rahul Verma", role: "Tech Lead, Avionics R&D", avatar: "https://i.pravatar.cc/120?img=15", quote: "Reliability-grade thinking with consumer-grade speed. That's the cheat code Surya brought to our project." },
+  { id: "t6", name: "Sneha Iyer", role: "PhD Researcher, IIT", avatar: "https://i.pravatar.cc/120?img=44", quote: "Co-authored a paper with him. Crisp, rigorous, and never afraid to challenge an assumption. Best collaborator I've had." },
+  { id: "t7", name: "Daniel Park", role: "Hackathon Mentor", avatar: "https://i.pravatar.cc/120?img=58", quote: "Surya's mentorship turned our prototype into a finalist project. Patient, sharp, generous with time." },
+  { id: "t8", name: "Anika Bose", role: "Community Lead", avatar: "https://i.pravatar.cc/120?img=23", quote: "Every talk Surya gives leaves the audience with a clearer mental model. That's a superpower." },
 ];
 
 export function TestimonialsSection() {
