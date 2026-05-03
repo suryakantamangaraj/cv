@@ -41,7 +41,7 @@ As this is a static/SPA portfolio site, security risks are primarily focused on:
 
 -   **Cross-Site Scripting (XSS):** Ensuring all dynamic content is properly sanitized.
 -   **Dependency Vulnerabilities:** Regularly updating `npm` packages to patch known issues.
--   **Deployment Security:** Ensuring the hosting platform (Cloudflare Pages) is configured with secure headers (HSTS, CSP, etc.).
+-   **Deployment Security:** Ensuring the hosting platform is configured with secure headers (HSTS, CSP, etc.).
 
 ---
 
