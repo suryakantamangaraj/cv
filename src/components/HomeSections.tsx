@@ -324,17 +324,17 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: "t1",
-    name: "Sushree Bandita",
-    role: "Lead, Samsung Semiconductor",
-    avatar: "/avatars/SushreeBandita.webp",
-    quote: "Good hardworking candidate.",
-  },
-  {
-    id: "t2",
     name: "Govind Sagar",
     role: "Senior Lead Engineer, Qualcomm",
     avatar: "/avatars/GovindSagar.webp",
     quote: "Being a senior and a mentor I personally know Surya. He is a technically sound guy and a fast learner. He can be an asset if utilised properly.",
+  },
+  {
+    id: "t2",
+    name: "Sushree Bandita",
+    role: "Lead, Samsung Semiconductor",
+    avatar: "/avatars/SushreeBandita.webp",
+    quote: "Good hardworking candidate.",
   },
   {
     id: "t3",
