@@ -41,13 +41,13 @@ interface Reward {
 }
 
 const rewards: Reward[] = [
-  { icon: Trophy,   title: "PSPICE Winner",                        organization: "Academic Competition",     year: "2017",           description: "Won the PSPICE circuit simulation competition.",        color: "text-highlight", category: "Hackathon",   link: "https://example.com/pspice-cert.pdf", linkLabel: "View Certificate" },
-  { icon: Zap,      title: "Texas Instruments India WEBENCH Design Contest", organization: "Texas Instruments",  year: "2018",      description: "Recognized in TI's WEBENCH design challenge for innovative circuit design.", color: "text-primary", category: "Workplace", link: "https://example.com/ti-webench-cert.pdf", linkLabel: "View Certificate" },
-  { icon: Award,    title: "ADAA 2017",                            organization: "Academic / Industry Award", year: "2017",          description: "Awarded for academic and design excellence.",           color: "text-chart-2",   category: "Workplace",   link: "https://example.com/adaa-cert.pdf", linkLabel: "View Certificate" },
-  { icon: Star,     title: "CADENCE DESIGN CONTEST 2018",          organization: "Cadence Design Systems",   year: "2018",           description: "Recognized in Cadence's design contest for EDA innovation.", color: "text-chart-3", category: "Workplace",   link: "https://example.com/cadence-contest-cert.pdf", linkLabel: "View Certificate" },
-  { icon: Trophy,   title: "awesome-riscv — 344+ Stars",           organization: "Open Source Community",    year: "2021 — Present", description: "Curated list became a top RISC-V community resource.",   color: "text-highlight", category: "Open Source", link: "https://github.com/suryakantamangaraj/awesome-riscv", linkLabel: "View Repo" },
-  { icon: Star,     title: "GitHub Profile Templates — 51+ Stars", organization: "GitHub Community",         year: "2022",           description: "Featured collection helping developers build profiles.", color: "text-primary",   category: "Open Source", link: "https://github.com/suryakantamangaraj/AwesomeGithubProfileTemplates", linkLabel: "View Repo" },
-  { icon: Sparkles, title: "Speaker — Tech Communities",           organization: "Various Meetups",          year: "2021 — Present", description: "Talks on RF design, embedded systems, and open source.", color: "text-chart-5",   category: "Speaking" },
+  { icon: Trophy, title: "PSPICE Winner", organization: "Academic Competition", year: "2017", description: "Won the PSPICE circuit simulation competition.", color: "text-highlight", category: "Hackathon", link: "https://example.com/pspice-cert.pdf", linkLabel: "View Certificate" },
+  { icon: Zap, title: "Texas Instruments India WEBENCH Design Contest", organization: "Texas Instruments", year: "2018", description: "Recognized in TI's WEBENCH design challenge for innovative circuit design.", color: "text-primary", category: "Workplace", link: "https://example.com/ti-webench-cert.pdf", linkLabel: "View Certificate" },
+  { icon: Award, title: "ADAA 2017", organization: "Academic / Industry Award", year: "2017", description: "Awarded for academic and design excellence.", color: "text-chart-2", category: "Workplace", link: "https://example.com/adaa-cert.pdf", linkLabel: "View Certificate" },
+  { icon: Star, title: "CADENCE DESIGN CONTEST 2018", organization: "Cadence Design Systems", year: "2018", description: "Recognized in Cadence's design contest for EDA innovation.", color: "text-chart-3", category: "Workplace", link: "https://example.com/cadence-contest-cert.pdf", linkLabel: "View Certificate" },
+  { icon: Trophy, title: "awesome-riscv — 344+ Stars", organization: "Open Source Community", year: "2021 — Present", description: "Curated list became a top RISC-V community resource.", color: "text-highlight", category: "Open Source", link: "https://github.com/suryakantamangaraj/awesome-riscv", linkLabel: "View Repo" },
+  { icon: Star, title: "GitHub Profile Templates — 51+ Stars", organization: "GitHub Community", year: "2022", description: "Featured collection helping developers build profiles.", color: "text-primary", category: "Open Source", link: "https://github.com/suryakantamangaraj/AwesomeGithubProfileTemplates", linkLabel: "View Repo" },
+  { icon: Sparkles, title: "Speaker — Tech Communities", organization: "Various Meetups", year: "2021 — Present", description: "Talks on RF design, embedded systems, and open source.", color: "text-chart-5", category: "Speaking" },
 ];
 
 const rewardFilters: { key: "all" | RewardCategory; label: string }[] = [
@@ -60,9 +60,9 @@ const rewardFilters: { key: "all" | RewardCategory; label: string }[] = [
 ];
 
 const languages = [
-  { name: "English", level: "Fluent",     percent: 95, native: "English",   flag: "🇬🇧", color: "from-primary to-highlight" },
-  { name: "Hindi",   level: "Fluent",     percent: 90, native: "हिन्दी",     flag: "🇮🇳", color: "from-highlight to-chart-5" },
-  { name: "Odia",    level: "Native",     percent: 100, native: "ଓଡ଼ିଆ",     flag: "🇮🇳", color: "from-chart-2 to-primary" },
+  { name: "English", level: "Fluent", percent: 95, native: "English", flag: "🇬🇧", color: "from-primary to-highlight" },
+  { name: "Hindi", level: "Fluent", percent: 90, native: "हिन्दी", flag: "🇮🇳", color: "from-highlight to-chart-5" },
+  { name: "Odia", level: "Native", percent: 100, native: "ଓଡ଼ିଆ", flag: "🇮🇳", color: "from-chart-2 to-primary" },
 ];
 
 
@@ -105,7 +105,7 @@ function AboutPage() {
                   <TextReveal text="Hi, I'm Surya." gradientWords={[2]} />
                 </motion.h1>
                 <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-                  An RF engineer by training, an open-source builder by passion, and a perpetual student of how things actually work — from radio waves to deep learning.
+                  An RF systems specialist by profession, a communication engineer shaping how signals connect across networks, an explorer of AI/ML in wireless by curiosity, and an open‑source contributor who turns complex ideas into content that inspires.
                 </motion.p>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mt-6">
                   <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" /> India</span>
@@ -135,12 +135,12 @@ function AboutPage() {
             <div className="grid lg:grid-cols-[2fr_1fr] gap-12">
               <div className="space-y-6">
                 <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl sm:text-4xl font-bold font-heading text-foreground">
-                  Building at the intersection of <span className="text-gradient-primary">radio, code & community.</span>
+                  Building at the intersection of <span className="text-gradient-primary">spectrum, code & community.</span>
                 </motion.h2>
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="space-y-4 text-muted-foreground leading-relaxed text-lg">
-                  <p>I specialize in ideating and developing technology-enabled products with a focus on the <strong className="text-foreground">Telecom, Avionics, and Satellite</strong> domains — the kinds of systems where every dB and every nanosecond matters.</p>
-                  <p>My passion lies in exploring <strong className="text-foreground">Automation, IoT, AI, and ML</strong> within these communication domains, then sharing what I learn through a personal wiki, blog posts, and open-source projects.</p>
-                  <p>I believe the best engineers stay curious, write things down, and lift others up. That's what this site — and most of what I do — is really about.</p>
+                  <p>I specialize in building technology‑enabled systems across <strong className="text-foreground">telecom, avionics, and satellite</strong> domains where every dB and nanosecond matter. My work centers on <strong className="text-foreground">RF system design and communication system engineering</strong>, shaping how signals connect across networks.</p>
+                  <p>My curiosity drives me to explore <strong className="text-foreground">automation, IoT, AI, and ML</strong> within these communication domains, blending engineering rigor with experimentation. I share what I learn through <strong className="text-foreground">blogging, open‑source projects, and a personal wiki</strong> turning complex ideas into accessible knowledge.</p>
+                  <p>I believe the best engineers stay curious, document their journey, and lift others up. That’s the spirit behind this, and the foundation of most of what I do.</p>
                 </motion.div>
               </div>
 
@@ -232,11 +232,10 @@ function AboutPage() {
                 <button
                   key={f.key}
                   onClick={() => setRewardFilter(f.key)}
-                  className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
-                    rewardFilter === f.key
-                      ? "bg-gradient-to-r from-primary to-highlight text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  }`}
+                  className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${rewardFilter === f.key
+                    ? "bg-gradient-to-r from-primary to-highlight text-primary-foreground"
+                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    }`}
                 >
                   {f.label}
                   <span className={`rounded-full px-1.5 text-[10px] ${rewardFilter === f.key ? "bg-background/20" : "bg-muted text-muted-foreground"}`}>
