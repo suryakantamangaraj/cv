@@ -15,7 +15,7 @@ A high-performance, interactive, and SEO-optimized digital CV built with the cut
 - **🎯 Interactive UX:** Smooth transitions and micro-interactions powered by Framer Motion.
 - **📱 Responsive Design:** Pixel-perfect layout across mobile, tablet, and desktop.
 - **🔍 SEO Optimized:** Automated sitemap generation, structured JSON-LD data, and meta tag management for maximum search visibility.
-- **⚡ Performance:** Built on Vite and TanStack Start for near-instant load times and efficient hydration.
+- **⚡ Performance:** Built on Vite and TanStack Start for near-instant load times and efficient static delivery as an SPA.
 - **🎨 Modern Aesthetics:** Clean, dark-themed UI using Tailwind CSS v4 and professional typography (Space Grotesk & DM Sans).
 
 ---
@@ -23,7 +23,7 @@ A high-performance, interactive, and SEO-optimized digital CV built with the cut
 ## 🛠️ Technology Stack
 
 ### Core Frameworks
-- **[TanStack Start](https://tanstack.com/start):** Full-stack React framework with incredible DX.
+- **[TanStack Start](https://tanstack.com/start):** Modern React framework providing high-performance server-side rendering and static site generation.
 - **[TanStack Router](https://tanstack.com/router):** Type-safe routing for 100% predictable navigation.
 - **[React 19](https://react.dev/):** The foundation for interactive UI components.
 
@@ -34,7 +34,7 @@ A high-performance, interactive, and SEO-optimized digital CV built with the cut
 
 ### Infrastructure
 - **[Vite](https://vitejs.dev/):** Ultra-fast build tool and dev server.
-- **[Cloudflare Pages](https://pages.cloudflare.com/):** Global edge deployment for lightning-fast delivery.
+- **[GitHub Pages](https://pages.github.com/):** Reliable static hosting with automated deployment via GitHub Actions.
 - **[vite-plugin-sitemap](https://github.com/jbaubree/vite-plugin-sitemap):** Automated SEO sitemap generation integrated into the build pipeline.
 
 ---
