@@ -308,8 +308,8 @@ function AboutPage() {
                 </motion.div>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-                <a href="https://blog.suryaraj.me" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">blog.suryaraj.me →</a>
-                <a href="https://wiki.suryaraj.me" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">wiki.suryaraj.me →</a>
+                <a href="https://blog.suryaraj.com" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">blog.suryaraj.com →</a>
+                <a href="https://wiki.suryaraj.com" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">wiki.suryaraj.com →</a>
                 <a href="https://circuitrylab.com/" target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-highlight text-primary-foreground font-semibold text-sm shadow-lg hover:shadow-primary/30 hover:scale-105 transition-all duration-300 overflow-hidden">
                   <span className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-[-20deg]" />
                   <Zap className="h-4 w-4" />
